@@ -1,0 +1,24 @@
+{
+  "name": "one-on-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "baseui": "^4.1.1",
+    "next": "^7.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "styletron-engine-atomic": "^1.0.9",
+    "styletron-react": "^4.3.6",
+    "styletron-standard": "^1.0.7"
+  }
+}
