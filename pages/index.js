@@ -35,7 +35,7 @@ export default function Hello() {
       <Block display="flex" justifyContent="center">
         <Block maxWidth="600px" marginTop="scale600">
           {questionsToDisplay.map((question) =>
-            <Block margin="scale200">
+            <Block key={question.value} margin="scale200">
               <Card>
                 {question.value}
                 <Block marginTop="scale300">
