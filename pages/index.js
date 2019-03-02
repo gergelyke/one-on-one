@@ -16,14 +16,6 @@ const NUMBER_OF_QUESTIONS_SHOWN = 3;
 const shuffledQuestions = questions.sort(() => .5 - Math.random());
 const questionsToDisplay = shuffledQuestions.slice(0, NUMBER_OF_QUESTIONS_SHOWN);
 
-const Centered = styled('div', {
-  // display: 'flex',
-  // justifyContent: 'center',
-  // alignItems: 'center',
-  // height: '100%',
-  // marginBottom: '10px'
-});
-
 export default function Hello() {
   return (
     <React.Fragment>
