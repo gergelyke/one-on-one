@@ -1,21 +1,11 @@
-const isServer = typeof window === 'undefined'
+import { Client, Server } from "styletron-engine-atomic";
 
-let styletron
+const getHydrateClass = () =>
+  document.getElementsByClassName("_styletron_hydrate_");
 
-export default function getStyletron () {
-  if (isServer && !styletron) {
-    const Styletron = require('styletron-engine-atomic').Server
-    styletron = new Styletron()
-  } else if (!styletron) {
-    const Styletron = require('styletron-engine-atomic').Client
-    const styleElements = document.getElementsByClassName('_styletron_hydrate_')
-    styletron = new Styletron(styleElements)
-  }
-  return styletron
-}
-
-export function flush () {
-  const _styletron = styletron
-  styletron = null
-  return _styletron
-}
+export const styletron =
+  typeof window === "undefined"
+    ? new Server()
+    : new Client({
+        hydrate: getHydrateClass()
+    });
