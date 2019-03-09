@@ -1,6 +1,6 @@
-import {styled} from 'baseui';
 import {Card} from 'baseui/card';
 import {Tag} from 'baseui/tag';
+import Head from 'next/head'
 import {
   HeaderNavigation,
   ALIGN,
@@ -19,6 +19,9 @@ const questionsToDisplay = shuffledQuestions.slice(0, NUMBER_OF_QUESTIONS_SHOWN)
 export default function Hello() {
   return (
     <React.Fragment>
+      <Head>
+        <title>1:1 Question ideas</title>
+      </Head>
       <HeaderNavigation>
         <NavigationList align={ALIGN.left}>
           <NavigationItem>1-1 Questions</NavigationItem>
